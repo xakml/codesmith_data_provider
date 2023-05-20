@@ -1,1 +1,4 @@
 /.vs
+/CustomPropertiesSample/bin/Debug
+/CustomPropertiesSample/obj/Debug
+/CustomPropertiesSample/.vs/CodeSmith.Samples/v15
