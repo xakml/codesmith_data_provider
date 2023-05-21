@@ -124,7 +124,7 @@ namespace SchemaExplorer
         public TableSchema[] GetTables( string connectionString, DatabaseSchema database )
         {
             string commandText = string.Format( "SELECT TABLE_NAME, '' OWNER, CREATE_TIME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '{0}' AND TABLE_TYPE = 'BASE TABLE' ORDER BY 1", database.Name );
-            var tableSchema = new List< TableSchema >();
+            var tableSchema = new List<TableSchema>();
 
             using (DbConnection connection = CreateConnection(connectionString))
             {
