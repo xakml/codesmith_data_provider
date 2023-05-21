@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5808191A-8B13-495E-9829-EDD7FB926389}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>CodesmithKeyGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DeployLXKeyGenerator.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>DeployLXKeyGenerator</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeployLX.Licensing.v4\ChangeEventArgs.cs" />
+    <Compile Include="DeployLX.Licensing.v4\ChangeEventHandler.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class21.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class25.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class27.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class28.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class30.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class37.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class4.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Class46.cs" />
+    <Compile Include="DeployLX.Licensing.v4\CollectionEventArgs.cs" />
+    <Compile Include="DeployLX.Licensing.v4\CollectionEventHandler.cs" />
+    <Compile Include="DeployLX.Licensing.v4\IChange.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Interface1.cs" />
+    <Compile Include="DeployLX.Licensing.v4\MachineProfile.cs" />
+    <Compile Include="DeployLX.Licensing.v4\MachineProfileEntry.cs" />
+    <Compile Include="DeployLX.Licensing.v4\MachineProfileEntryCollection.cs" />
+    <Compile Include="DeployLX.Licensing.v4\MachineProfileEntryType.cs" />
+    <Compile Include="DeployLX.Licensing.v4\MachineType.cs" />
+    <Compile Include="DeployLX.Licensing.v4\OSEditions.cs" />
+    <Compile Include="DeployLX.Licensing.v4\OSProduct.cs" />
+    <Compile Include="DeployLX.Licensing.v4\OSRecord.cs" />
+    <Compile Include="DeployLX.Licensing.v4\Toolbox.cs" />
+    <Compile Include="DeployLX.Licensing.v4\TypeHelper.cs" />
+    <Compile Include="DeployLX.Licensing.v4\WithEventsCollection.cs" />
+    <Compile Include="DeployLXKeyGenerator\Class30.cs" />
+    <Compile Include="DeployLXKeyGenerator\GenerateActivationCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeployLXKeyGenerator\ILicenseCodeSupport.cs" />
+    <Compile Include="DeployLXKeyGenerator\IMachineProfileEntryMaker.cs" />
+    <Compile Include="DeployLXKeyGenerator\Images.cs" />
+    <Compile Include="DeployLXKeyGenerator\LicenseKeyGen.cs" />
+    <Compile Include="DeployLXKeyGenerator\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeployLXKeyGenerator\MetadataReader.cs" />
+    <Compile Include="DeployLXKeyGenerator\Program.cs" />
+    <Compile Include="DeployLXKeyGenerator\ReadLicenseKey.cs" />
+    <Compile Include="DeployLXKeyGenerator\Toolbox.cs" />
+    <Compile Include="DeployLXKeyGenerator\Utils.cs" />
+    <Compile Include="DeployLXLicensing\CodeAlgorithm.cs" />
+    <Compile Include="DeployLXLicensing\MachineProfile.cs" />
+    <Compile Include="DeployLXLicensing\MachineProfileEntryType.cs" />
+    <Compile Include="DeployLXLicensing\MachineType.cs" />
+    <Compile Include="DeployLXLicensing\SerialNumberFlags.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
